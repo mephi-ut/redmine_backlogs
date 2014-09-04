@@ -27,6 +27,8 @@
     <div class="t"><%= status_label_or_default(story) %></div>
     <div class="v"><%= status_id_or_default(story) %></div>
   </div>
+  <div class="estimated_hours editable story_field" fieldtype="input" fieldname="estimated_hours" fieldlabel="<%=l(:field_estimated_hours)%>"><%=h estimatedhours_or_default(story) %>
+  </div>
   <% if Backlogs.setting[:story_points].blank? %>
   <div class="story_points editable story_points_text story_field" fieldname="story_points" fieldlabel="<%=l(:story_points)%>" fieldtype="input"><%= story_points_or_empty(story) %></div>
   <% else %>

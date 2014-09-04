@@ -101,6 +101,10 @@ filter:progid:DXImageTransform.Microsoft.Gradient(Enabled=1,GradientType=0,Start
     story.new_record? ? IssueStatus.default.id : story.status.id
   end
 
+  def estimatedhours_or_default(story)
+    story.new_record? ? "" : story.estimated_hours
+  end
+
   def status_label_or_default(story)
     story.new_record? ? IssueStatus.default.name : story.status.name
   end

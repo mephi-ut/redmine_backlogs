@@ -47,7 +47,7 @@
   width: 100%;
 }
 .fff-middle{
-  margin-right:112px;
+  margin-right:146px;
   margin-left:110px;
 }
 .fff-left{
@@ -57,8 +57,8 @@
 }
 .fff-right{
   float: left;
-  width: 112px;
-  margin-left: -112px;
+  width: 146px;
+  margin-left: -146px;
 }
 
 .header .fff-middle{
@@ -422,6 +422,12 @@ ul li { vertical-align: bottom; } /* close IE7 gap between list items */
   float: left;
   padding-left:8px;
   white-space: nowrap;
+}
+
+#backlogs_container .stories .story .estimated_hours {
+  text-align:right;
+  float: left;
+  width:34px;
 }
 
 #backlogs_container .stories .story .story_points {
