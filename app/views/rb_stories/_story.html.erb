@@ -23,16 +23,16 @@
   </div>
  </div>
  <div class="fff-right">
-  <div class="status_id editable story_field" fieldtype="select" fieldname="status_id" fieldlabel="<%=l(:field_status_id)%>">
+  <div class="status_id editable story_field" fieldtype="select" fieldname="status_id" fieldlabel="<%=l(:field_status_id)%>" title="<%=l(:l_backlog_field_status_id)%>">
     <div class="t"><%= status_label_or_default(story) %></div>
     <div class="v"><%= status_id_or_default(story) %></div>
   </div>
-  <div class="estimated_hours editable story_field" fieldtype="input" fieldname="estimated_hours" fieldlabel="<%=l(:field_estimated_hours)%>"><%=h estimatedhours_or_default(story) %>
+  <div class="estimated_hours editable story_field" fieldtype="input" fieldname="estimated_hours" fieldlabel="<%=l(:field_estimated_hours)%>" title='<%=l(:field_estimated_hours)%>'><%=h estimatedhours_or_default(story) %>
   </div>
   <% if Backlogs.setting[:story_points].blank? %>
-  <div class="story_points editable story_points_text story_field" fieldname="story_points" fieldlabel="<%=l(:story_points)%>" fieldtype="input"><%= story_points_or_empty(story) %></div>
+  <div class="story_points editable story_points_text story_field" fieldname="story_points" fieldlabel="<%=l(:story_points)%>" fieldtype="input" title="<%=l(:story_points)%>"><%= story_points_or_empty(story) %></div>
   <% else %>
-  <div class="story_points editable story_points_select story_field" fieldtype="select" fieldname="story_points" fieldlabel="<%=l(:story_points)%>">
+  <div class="story_points editable story_points_select story_field" fieldtype="select" fieldname="story_points" fieldlabel="<%=l(:story_points)%>" title="<%=l(:story_points)%>">
     <% %w(t v).each do |c| %>
       <div class="<%=h c %>"><%= story_points_or_empty(story) %></div>
     <% end %>
