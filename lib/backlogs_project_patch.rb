@@ -263,6 +263,7 @@ module Backlogs
           @shared_releases ||= begin
             order = Backlogs.setting[:sprint_sort_order] == 'desc' ? 'DESC' : 'ASC'
             r = root? ? self : root
+            r = r.nil? ? self : r
             RbRelease.scoped(:include => :project,
               :conditions => "#{Project.table_name}.id = #{id}" +
                 " OR (#{Project.table_name}.status <> #{Project::STATUS_ARCHIVED} AND (" +
